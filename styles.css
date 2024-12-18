@@ -1,0 +1,176 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: #0d0d0d;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.container {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+            background-color: #1a1a1a;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    gap: 20px;
+    margin: 40px auto;
+    position: relative; /* Needed for absolute positioning of winning lines */
+}
+
+.cell {
+    width: 200px;
+    height: 200px;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    font-size: 48px; /* Adjust font size for better visibility */
+}
+
+.cell img {
+    width: 150px;
+    height: 150px;
+}
+
+.scoreboard, .turn-indicator{
+    margin: 20px;
+    font-size: 36px;
+    background-color: #1a1a1a; /* Adding background color */
+    color: #ffffff; /* Adding text color for better visibility */
+    padding: 10px; /* Adding some padding for better aesthetics */
+    border-radius: 5px; /* Optional: Adding rounded corners */
+} .mode-selection {
+	margin: 20px;
+    font-size: 36px;
+}
+
+#menu img {
+    width: 900px;
+    height: auto;
+    display: block; 
+    margin: 0 auto; 
+}
+
+#menu button {
+    font-size: 2rem;
+}
+
+#board img {
+    width: 150px;
+    height: 150px;
+}
+
+#turn {
+    color: #00ff00;
+    font-weight: bold;
+}
+
+#winner {
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #fff;
+	background-color: #1a1a1a;
+}
+
+#reset-score {
+    background-color: #ff0000;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#reset-score:hover {
+    background-color: #cc0000;
+}
+
+.controls {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#mute-button {
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+#mute-button:hover {
+    background-color: #333;
+}
+
+#volume-slider {
+    -webkit-appearance: none;
+    width: 100px;
+    height: 5px;
+    background: #1a1a1a;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .15s ease-in-out;
+}
+
+#volume-slider:hover {
+    opacity: 1;
+}
+#pause-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+}

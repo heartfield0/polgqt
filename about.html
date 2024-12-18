@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Game</title>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="shortcut icon" type="image/x-icon" href="icon.jpg" />
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: #0d0d0d;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #1a1a1a;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="background.mp4" type="video/mp4">
+    </video>
+
+    <div class="container">
+        <h1>About the Game</h1>
+        <p>Tic-tac-toe, a game that has stood the test of time, has roots that trace back to the Roman Empire around the 1st century B.C. During this period, an early variation of the game was played, known as "terni lapilli," which translates to "three pebbles at a time." This ancient game was played using a grid, similar to the modern version of tic-tac-toe we know today. The remnants of this game have been discovered chalked all over Roman ruins, indicating its widespread popularity among the Romans. Interestingly, evidence of a similar game has also been unearthed in ancient Egyptian ruins, suggesting that this simple yet engaging game had found its place in different cultures and civilizations.</p>
+        <button onclick="window.location.href='index.html'">Back to Main Menu</button>
+    </div>
+</body>
+</html>

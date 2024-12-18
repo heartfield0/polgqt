@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile App - Tic Tac Code</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="icon.jpg" />
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: #0d0d0d;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            max-width: 1000px;
+            margin: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .app-mockup {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .app-mockup img {
+            max-width: 100%;
+            border-radius: 15px;
+        }
+
+        .app-description {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .app-description h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .app-description p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .qr-code {
+            margin-top: 20px;
+        }
+
+        .qr-code img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: #1a1a1a;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="background.mp4" type="video/mp4">
+    </video>
+
+    <div class="container">
+        <div class="app-mockup">
+            <img src="mockup.png" alt="Tic Tac Code Mobile App">
+        </div>
+        <div class="app-description">
+            <h1>Tic Tac Code Mobile App</h1>
+            <p>
+                Experience Tic Tac Code like never before with our mobile app! Play your favorite game on the go, challenge friends, and enjoy new features exclusive to the mobile version. The app offers an easy interface and smooth gameplay, making it easy and quick to play.
+            </p>
+            <button onclick="window.location.href='index.html'">Back to Menu</button>
+            <button onclick="window.location.href='https://drive.google.com/file/d/1LLXlXu2E87qJ9ExGzYKoxQEmuU-9MBCs/view?usp=sharing'">Download the App</button>
+
+            <!-- QR Code Section -->
+            <div class="qr-code">
+                <p>Scan the QR code to download:</p>
+                <img src="QR.png" alt="QR Code">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
