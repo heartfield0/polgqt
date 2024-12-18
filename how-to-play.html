@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play</title>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="shortcut icon" type="image/x-icon" href="icon.jpg" />
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: #0d0d0d;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            max-width: 1000px;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #1a1a1a;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="background.mp4" type="video/mp4">
+    </video>
+
+    <div class="container">
+        <h1>How to Play</h1>
+        <h2>Mechanics</h2>
+        <p>The game begins with a blank 3x3 grid. Before starting the game, players are required to input their names. The first player will be referred to as Player 1 and the second player as Player 2. Player 1 will use the 1 marker, while Player 2 will use the 0 marker. Players take turns to place their marker on the grid, with Player 1 going first. A marker can be placed in any of the nine squares, as long as it is not already occupied by another marker.</p>
+        <h2>Rules and Regulations</h2>
+        <p>The game is won when a player has three of their markers in a row, column, or diagonal on the grid. If all squares are filled and no player has achieved this condition, the game is a draw. Players cannot skip their turn or place their marker in a square that is already occupied. If a player is found to be cheating or breaking the rules, they will automatically forfeit the game. The game ends once a winner is declared or the game is a draw. Players can choose to start a new game after the current game ends.</p>
+        <button onclick="window.location.href='index.html'">Back to Main Menu</button>
+    </div>
+</body>
+</html>
